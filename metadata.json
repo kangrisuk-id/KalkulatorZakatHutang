@@ -1,0 +1,6 @@
+{
+  "name": "Kalkulator Zakat & Hutang",
+  "description": "Kalkulator zakat offline lengkap (Maal, Profesi, Fitrah, Perdagangan) & catatan hutang piutang terenkripsi dengan PIN keamanan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
