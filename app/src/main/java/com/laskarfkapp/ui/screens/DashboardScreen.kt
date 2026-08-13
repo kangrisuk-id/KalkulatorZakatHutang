@@ -49,11 +49,11 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.admob.CollapsibleBannerAd
-import com.example.data.repository.NisabRates
-import com.example.ui.components.HeaderBanner
-import com.example.util.FormatUtils
-import com.example.viewmodel.MainViewModel
+import com.laskarfkapp.zakathutang.admob.CollapsibleBannerAd
+import com.laskarfkapp.zakathutang.data.repository.NisabRates
+import com.laskarfkapp.zakathutang.ui.components.HeaderBanner
+import com.laskarfkapp.zakathutang.util.FormatUtils
+import com.laskarfkapp.zakathutang.viewmodel.MainViewModel
 
 @Composable
 fun DashboardScreen(
