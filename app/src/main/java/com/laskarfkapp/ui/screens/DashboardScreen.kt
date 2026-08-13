@@ -1,5 +1,7 @@
 package com.laskarfkapp.zakathutang.ui.screens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,9 +21,11 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.Launch
 import androidx.compose.material.icons.filled.AccountBalance
-import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Calculate
+import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Payments
 import androidx.compose.material.icons.filled.ShoppingBag
@@ -39,21 +43,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import android.content.Intent
-import android.net.Uri
-import androidx.compose.material.icons.filled.Code
-import androidx.compose.material.icons.filled.Launch
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalUriHandler
-import com.laskarfkapp.zakathutang.admob.CollapsibleBannerAd
-import com.laskarfkapp.zakathutang.data.repository.NisabRates
-import com.laskarfkapp.zakathutang.ui.components.HeaderBanner
-import com.laskarfkapp.zakathutang.util.FormatUtils
-import com.laskarfkapp.zakathutang.viewmodel.MainViewModel
+import com.example.admob.CollapsibleBannerAd
+import com.example.data.repository.NisabRates
+import com.example.ui.components.HeaderBanner
+import com.example.util.FormatUtils
+import com.example.viewmodel.MainViewModel
 
 @Composable
 fun DashboardScreen(
@@ -273,7 +273,7 @@ fun DashboardScreen(
                         }
 
                         Icon(
-                            imageVector = Icons.Default.ArrowForward,
+                            imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary
                         )
@@ -441,7 +441,7 @@ fun DashboardScreen(
                         )
                     }
                     Icon(
-                        imageVector = Icons.Default.Launch,
+                        imageVector = Icons.AutoMirrored.Filled.Launch,
                         contentDescription = "Buka Link",
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(16.dp)
