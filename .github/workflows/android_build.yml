@@ -24,16 +24,6 @@ jobs:
         with:
           validate-wrappers: false
 
-      - name: Create .env file if missing
-        run: |
-          if [ ! -f .env ]; then
-            if [ -f .env.example ]; then
-              cp .env.example .env
-            else
-              touch .env
-            fi
-          fi
-
       - name: Make Gradlew Executable
         run: chmod +x gradlew
 
@@ -45,8 +35,7 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         # Menambahkan parameter -Pandroid.disallowKotlinSourceSets=false
-        run: |
-          gradle assembleRelease bundleRelease -Pandroid.disallowKotlinSourceSets=false --no-daemon
+        run: ./gradlew assembleRelease bundleRelease -Pandroid.disallowKotlinSourceSets=false --no-daemon
 
       - name: Upload Release APK Artifact
         uses: actions/upload-artifact@v4
