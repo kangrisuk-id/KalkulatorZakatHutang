@@ -1,6 +1,8 @@
 package com.laskarfkapp.zakathutang.ui.screens
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,24 +21,24 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Launch
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.LightMode
-import com.laskarfkapp.zakathutang.model.AppLanguage
 import androidx.compose.material.icons.filled.LockReset
 import androidx.compose.material.icons.filled.Movie
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.SettingsBrightness
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -56,19 +58,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import android.content.Intent
-import android.net.Uri
-import androidx.compose.material.icons.filled.Code
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Launch
-import androidx.compose.ui.platform.LocalUriHandler
-import com.laskarfkapp.zakathutang.ui.components.AboutDialog
 import com.laskarfkapp.zakathutang.admob.AdManager
+import com.laskarfkapp.zakathutang.model.AppLanguage
+import com.laskarfkapp.zakathutang.ui.components.AboutDialog
 import com.laskarfkapp.zakathutang.ui.theme.ThemeMode
 import com.laskarfkapp.zakathutang.util.ExportUtils
 import com.laskarfkapp.zakathutang.util.FormatUtils
@@ -649,7 +647,7 @@ fun HistorySettingsScreen(
                             }
 
                             Icon(
-                                imageVector = Icons.Default.Launch,
+                                imageVector = Icons.AutoMirrored.Filled.Launch,
                                 contentDescription = "Buka Link",
                                 tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.size(18.dp)
