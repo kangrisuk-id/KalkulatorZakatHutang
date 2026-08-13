@@ -7,7 +7,7 @@ import java.util.Locale
 
 object FormatUtils {
 
-    private val indonesialocale = Locale("id", "ID")
+    private val indonesialocale = Locale.forLanguageTag("id", "ID")
 
     fun formatRupiah(amount: Double): String {
         val format = NumberFormat.getCurrencyInstance(indonesialocale)
